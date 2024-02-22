@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "og": "^0.0.2",
+    "pg": "^8.11.3"
+  },
+  "name": "mern-stack-reading-tracker-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Robert McCrary",
+  "license": "ISC",
+  "description": "Simple Library app",
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

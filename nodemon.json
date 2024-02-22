@@ -1,0 +1,6 @@
+{
+    "watch": ["src/api"],
+    "ext": "js,json", 
+    "ignore": ["node_modules"] 
+  }
+  
