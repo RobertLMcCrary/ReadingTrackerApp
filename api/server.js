@@ -8,18 +8,15 @@ app.use(express.json());
 app.use(cors());
 
 // Sample data for the in-memory "books" array
-let books = [
-    { id: 1, title: 'example book 1', author: 'example author', notes: 'notes on the book' },
-    { id: 2, title: 'example book 2', author: 'example author', notes: 'notes on the book' },
-];
+let books = require('./Library.json');
 
 // Endpoint to get all books from the in-memory "books" array
-app.get('/api/books', (req, res) => {
+app.get('/api/Library.json', (req, res) => {
     res.json(books);
 });
 
 // Endpoint to get a specific book by ID from the in-memory "books" array
-app.get('/api/books/:id', (req, res) => {
+app.get('/api/Library.json/:id', (req, res) => {
     const itemId = parseInt(req.params.id);
     const item = books.find((book) => book.id === itemId);
 
@@ -31,7 +28,7 @@ app.get('/api/books/:id', (req, res) => {
 });
 
 // Endpoint to add a new book to the in-memory "books" array
-app.post('/api/books', (req, res) => {
+app.post('/api/Library.json', (req, res) => {
     const newBook = {
         id: books.length + 1,
         title: req.body.title,
@@ -45,7 +42,7 @@ app.post('/api/books', (req, res) => {
 });
 
 // Endpoint to delete a book from the in-memory "books" array
-app.delete('/api/books/:id', (req, res) => {
+app.delete('/api/Library.json/:id', (req, res) => {
     const itemId = parseInt(req.params.id);
     const index = books.findIndex((book) => book.id === itemId);
 
@@ -59,7 +56,7 @@ app.delete('/api/books/:id', (req, res) => {
 });
 
 // Update notes for a specific book
-app.put('/api/books/:id/notes', (req, res) => {
+app.put('/api/Library.json/:id/notes', (req, res) => {
     const bookId = parseInt(req.params.id);
     const updatedNotes = req.body.notes;
 

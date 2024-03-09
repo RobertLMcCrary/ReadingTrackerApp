@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "title": "example book 1",
+        "author": "example author",
+        "notes": "notes on the book"
+    },
+    {
+        "id": 2,
+        "title": "example book 2",
+        "author": "example author",
+        "notes": "notes on the book"
+    }
+]
